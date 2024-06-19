@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const updateScrollIndicator = () => {
-        const totalCards = document.querySelectorAll('.card').length;
-        const cardWidth = document.querySelector('.card').offsetWidth + 20; // Larghezza scheda + margine
+        const totalCards = document.querySelectorAll('.card-container').length;
+        const cardWidth = document.querySelector('.card-container').offsetWidth;
         const scrollLeft = scrollContainer.scrollLeft;
         const currentIndex = Math.round(scrollLeft / cardWidth);
 
@@ -35,4 +35,20 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollIndicator.appendChild(dot);
         }
 
-        // Aggiorna il testo del​⬤
+        // Aggiorna il testo del footer
+        footerText.textContent = phrases[currentIndex];
+    };
+
+    // Aggiorna i puntini inizialmente
+    updateScrollIndicator();
+
+    // Aggiorna i puntini al scroll
+    scrollContainer.addEventListener('scroll', () => {
+        updateScrollIndicator();
+    });
+
+    // Correggi i problemi di visualizzazione iniziale
+    window.addEventListener('resize', () => {
+        updateScrollIndicator();
+    });
+});

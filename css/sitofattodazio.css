@@ -13,51 +13,54 @@ body, html {
     height: 100%;
     overflow-x: hidden;
     background-color: #1a1a1a; /* Nero meno intenso */
-    scroll-snap-type: y mandatory;
 }
 
 .screen {
     width: 100%;
     height: 100vh;
-    scroll-snap-align: start;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
     flex-direction: column;
     position: relative;
+    scroll-snap-align: start;
 }
 
 .horizontal-scroll {
     display: flex;
-    overflow-x: auto; /* Mantiene lo scorrimento orizzontale */
+    overflow-x: auto;
     scroll-snap-type: x mandatory;
-    width: 100%; /* Aumenta la larghezza al 100% */
+    width: 100%;
     padding: 0 15px;
     scroll-padding: 0 15px;
-    -ms-overflow-style: none;  /* Nasconde la barra di scorrimento in Internet Explorer e Edge */
-    scrollbar-width: none;  /* Nasconde la barra di scorrimento in Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .horizontal-scroll::-webkit-scrollbar {
-    display: none; /* Nasconde la barra di scorrimento in Chrome, Safari e Opera */
+    display: none;
+}
+
+.card-container {
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 
 .card {
-    background: #00000000; /* Colore bianco */
+    background: #00000000;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0);
-    border-radius: 0.6rem; /* Stesso border-radius */
-    margin: 0 10px; /* Rimuovi margini fissi e usa margini flessibili */
+    border-radius: 0.6rem;
     width: 80vw; /* Usa viewport width per la reattività */
     max-width: 275px; /* Imposta una larghezza massima */
-    height: auto; /* Permetti all'altezza di adattarsi automaticamente */
+    height: auto;
     cursor: pointer;
     flex: 0 0 auto;
     scroll-snap-align: center;
     text-align: center;
     text-decoration: none;
     color: inherit;
-    position: relative; /* Necessario per posizionare il testo assolutamente */
+    position: relative;
 }
 
 .card img {
@@ -81,20 +84,20 @@ body, html {
 }
 
 .header-text {
-    position: absolute;
-    top: 10px;
-    left: 34px;
     font-family: 'TWK Everest', sans-serif;
-    font-size: 28pt;
+    font-size: 6vw; /* Usa viewport width per la reattività */
     color: #ffffff;
-    line-height: 0.2;
+    line-height: 1.2;
     text-align: left;
     text-transform: uppercase;
+    position: absolute;
+    top: 5%;
+    left: 5%;
 }
 
 .scroll-indicator {
     position: absolute;
-    bottom: 130px; /* Distanza dal fondo della pagina */
+    bottom: 15%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -117,12 +120,12 @@ body, html {
 
 .footer-text {
     font-family: 'TWK Everest', sans-serif;
-    font-size: 14pt;
+    font-size: 4vw; /* Usa viewport width per la reattività */
     color: #ffffff;
     position: absolute;
-    bottom: 40px; /* Distanza dal fondo della pagina */
-    left: 34px; /* Distanza dal lato sinistro della pagina */
-    right: 34px; /* Distanza dal lato destro della pagina */
+    bottom: 5%;
+    left: 5%;
+    right: 5%;
     text-align: left;
     text-transform: uppercase;
 }
