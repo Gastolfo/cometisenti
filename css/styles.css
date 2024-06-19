@@ -40,7 +40,6 @@ body, html {
     background-color: transparent;
     width: 275px; /* Larghezza */
     height: 389px; /* Altezza */
-    perspective: 1000px;
     font-family: inherit;
     position: relative;
     margin: 2.2rem; /* Margine */
@@ -132,7 +131,7 @@ body, html {
 .back-button {
     position: absolute;
     bottom: 15px; /* Posizione verticale */
-    left: 20px; /* Posizione orizzontale */
+    left: 10.5px; /* Posizione orizzontale */
     background: transparent;
     border: none;
     cursor: pointer;
@@ -148,7 +147,7 @@ body, html {
 .header-text {
     position: absolute;
     top: 10px;
-    left: 34px;
+    left: 33.5px;
     font-family: 'TWK Everest', sans-serif;
     font-size: 28pt;
     color: #ffffff;
@@ -159,7 +158,7 @@ body, html {
 
 .scroll-indicator {
     position: absolute;
-    bottom: 130px; /* Distanza dal fondo della pagina */
+    bottom: 120.5px; /* Distanza dal fondo della pagina */
     left: 50%;
     transform: translateX(-50%);
     display: flex;

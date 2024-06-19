@@ -45,9 +45,8 @@ body, html {
 
 .card {
     background: #00000000; /* Colore bianco */
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0);
     border-radius: 0.6rem; /* Stesso border-radius */
-    margin: 2.2rem;
+    margin: 2.25rem;
     width: 275px; /* Larghezza fissa in pixel */
     height: 389px; /* Altezza fissa in pixel */
     cursor: pointer;
@@ -60,7 +59,7 @@ body, html {
 }
 
 .card img {
-    width: 102%;
+    width: 100%;
     height: auto;
     border-top-left-radius: 0.6rem;
     border-top-right-radius: 0.6rem;
@@ -93,7 +92,7 @@ body, html {
 
 .scroll-indicator {
     position: absolute;
-    bottom: 130px; /* Distanza dal fondo della pagina */
+    bottom: 120px; /* Distanza dal fondo della pagina */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -104,14 +103,14 @@ body, html {
     width: 4px;
     height: 4px;
     background-color: #fff;
-    border-radius: 50%;
+    border-radius: 0.6rem;
     transition: width 0.3s, height 0.3s;
 }
 
 .scroll-indicator .dot.active {
     width: 60px;
     height: 4px;
-    border-radius: 10px;
+    border-radius: 0.6rem;
 }
 
 .footer-text {
@@ -119,9 +118,8 @@ body, html {
     font-size: 14pt;
     color: #ffffff;
     position: absolute;
-    bottom: 40px; /* Distanza dal fondo della pagina */
-    left: 34px; /* Distanza dal lato sinistro della pagina */
+    bottom: 15px; /* Distanza dal fondo della pagina */
+    left: 33.5px; /* Distanza dal lato sinistro della pagina */
     right: 34px; /* Distanza dal lato destro della pagina */
-    text-align: left;
     text-transform: uppercase;
 }
