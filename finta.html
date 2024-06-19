@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pagina Mobile con Immagine a Schermo Intero e Pulsante</title>
+<style>
+body, html { 
+  height: 100%; 
+  margin: 0; 
+}
+.bg {
+  background-image: url('Tavola disegno 4.png'); 
+  min-height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  position: relative;
+}
+.btn {
+  position: absolute; /* Posizionamento assoluto per controllare la posizione */
+  bottom: 90px; /* Distanza dal fondo */
+  left: 50%;
+  transform: translateX(-50%); /* Centra orizzontalmente */
+  padding: 75px 400px; /* Dimensioni iniziali */
+  background-color: #f0f0f000; 
+  color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<div class="bg">
+  <button class="btn" onclick="window.location.href='altra_pagina.html';">Vai all'altra pagina</button>
+</div>
+
+<script>
+const button = document.querySelector('.btn');
+
+// Funzione per regolare dimensioni e posizione
+function adjustButton(width, height, bottom, left) {
+  button.style.width = width + 'px';
+  button.style.height = height + 'px';
+  button.style.bottom = bottom + 'px';
+  button.style.left = left + '%';
+  button.style.transform = `translateX(-${left}%)`; // Centra orizzontalmente
+}
+
+// Esempio di utilizzo (puoi personalizzare i valori)
+adjustButton(200, 50, 50, 50); // Larghezza 200px, altezza 50px, 50px dal fondo, centrato
+</script>
+
+</body>
+</html>

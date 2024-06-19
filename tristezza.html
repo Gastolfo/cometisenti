@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Flip Cards</title>
+</head>
+<body>
+    <div class="header-text">
+        <p>TRISTEZZA</p>
+    </div>
+    <div class="horizontal-scroll" id="scrollContainer">
+        <!-- Prima flip card -->
+        <div class="flip-card">
+            <input type="checkbox" id="flip-toggle1" style="display:none;">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="front-image1.png" alt="Front Image">
+                    <p class="title">FLIP CARD 1</p>
+                    <p>Click Me</p>
+                </div>
+                <div class="flip-card-back">
+                    <img src="back-image1.png" alt="Back Image">
+                    <p class="title">BACK 1</p>
+                    <p>Leave Me</p>
+                </div>
+            </div>
+            <label for="flip-toggle1" class="flip-card-label"></label>
+        </div>
+
+        <!-- Seconda flip card -->
+        <div class="flip-card">
+            <input type="checkbox" id="flip-toggle2" style="display:none;">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="front-image2.png" alt="Front Image">
+                    <p class="title">FLIP CARD 2</p>
+                    <p>Click Me</p>
+                </div>
+                <div class="flip-card-back">
+                    <img src="back-image2.jpg" alt="Back Image">
+                    <p class="title">BACK 2</p>
+                    <p>Leave Me</p>
+                </div>
+            </div>
+            <label for="flip-toggle2" class="flip-card-label"></label>
+        </div>
+
+        <!-- Terza flip card -->
+        <div class="flip-card">
+            <input type="checkbox" id="flip-toggle3" style="display:none;">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="front-image3.png" alt="Front Image">
+                </div>
+                <div class="flip-card-back">
+                    <img src="back-image3.jpg" alt="Back Image">
+                </div>
+            </div>
+            <label for="flip-toggle3" class="flip-card-label"></label>
+        </div>
+    </div>
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+    <a href="finta.html" class="choose-button">SCEGLI QUESTO</a>
+    <button class="back-button" onclick="window.history.back();">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+    </button>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'TWK Everest';
+    src: url('path/to/TWKEverest-Medium.woff2') format('woff2'),
+         url('path/to/TWKEverest-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #1a1a1a; /* Nero meno intenso */
+    scroll-snap-type: y mandatory;
+}
+
+.screen {
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    flex-direction: column;
+    position: relative;
+}
+
+.horizontal-scroll {
+    display: flex;
+    overflow-x: auto; /* Mantiene lo scorrimento orizzontale */
+    scroll-snap-type: x mandatory;
+    width: 100%; /* Aumenta la larghezza al 100% */
+    padding: 0 15px;
+    scroll-padding: 0 15px;
+    -ms-overflow-style: none;  /* Nasconde la barra di scorrimento in Internet Explorer e Edge */
+    scrollbar-width: none;  /* Nasconde la barra di scorrimento in Firefox */
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+    display: none; /* Nasconde la barra di scorrimento in Chrome, Safari e Opera */
+}
+
+.card {
+    background: #00000000; /* Colore bianco */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0);
+    border-radius: 0.6rem; /* Stesso border-radius */
+    margin: 2.2rem;
+    width: 275px; /* Larghezza fissa in pixel */
+    height: 389px; /* Altezza fissa in pixel */
+    cursor: pointer;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    position: relative; /* Necessario per posizionare il testo assolutamente */
+}
+
+.card img {
+    width: 102%;
+    height: auto;
+    border-top-left-radius: 0.6rem;
+    border-top-right-radius: 0.6rem;
+}
+
+.title {
+    width: 100%;
+    display: inline-block;
+    word-break: break-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    margin: 1rem auto;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.header-text {
+    position: absolute;
+    top: 10px;
+    left: 34px;
+    font-family: 'TWK Everest', sans-serif;
+    font-size: 28pt;
+    color: #ffffff;
+    line-height: 0.2;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 130px; /* Distanza dal fondo della pagina */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.scroll-indicator .dot {
+    width: 4px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: width 0.3s, height 0.3s;
+}
+
+.scroll-indicator .dot.active {
+    width: 60px;
+    height: 4px;
+    border-radius: 10px;
+}
+
+.footer-text {
+    font-family: 'TWK Everest', sans-serif;
+    font-size: 14pt;
+    color: #ffffff;
+    position: absolute;
+    bottom: 40px; /* Distanza dal fondo della pagina */
+    left: 34px; /* Distanza dal lato sinistro della pagina */
+    right: 34px; /* Distanza dal lato destro della pagina */
+    text-align: left;
+    text-transform: uppercase;
+}
