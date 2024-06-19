@@ -47,9 +47,10 @@ body, html {
     background: #00000000; /* Colore bianco */
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0);
     border-radius: 0.6rem; /* Stesso border-radius */
-    margin: 2.2rem;
-    width: 275px; /* Larghezza fissa in pixel */
-    height: 389px; /* Altezza fissa in pixel */
+    margin: 0 10px; /* Rimuovi margini fissi e usa margini flessibili */
+    width: 80vw; /* Usa viewport width per la reattività */
+    max-width: 275px; /* Imposta una larghezza massima */
+    height: auto; /* Permetti all'altezza di adattarsi automaticamente */
     cursor: pointer;
     flex: 0 0 auto;
     scroll-snap-align: center;
@@ -60,7 +61,7 @@ body, html {
 }
 
 .card img {
-    width: 102%;
+    width: 100%;
     height: auto;
     border-top-left-radius: 0.6rem;
     border-top-right-radius: 0.6rem;
