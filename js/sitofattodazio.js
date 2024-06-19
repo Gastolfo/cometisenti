@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const updateScrollIndicator = () => {
-        const totalCards = document.querySelectorAll('.card-container').length;
-        const cardWidth = document.querySelector('.card-container').offsetWidth;
+        const totalCards = document.querySelectorAll('.card').length;
+        const cardWidth = document.querySelector('.card').clientWidth + 32; // Include il margine
         const scrollLeft = scrollContainer.scrollLeft;
         const currentIndex = Math.round(scrollLeft / cardWidth);
 
@@ -44,11 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Aggiorna i puntini al scroll
     scrollContainer.addEventListener('scroll', () => {
-        updateScrollIndicator();
-    });
-
-    // Correggi i problemi di visualizzazione iniziale
-    window.addEventListener('resize', () => {
         updateScrollIndicator();
     });
 });
