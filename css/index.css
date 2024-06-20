@@ -1,15 +1,15 @@
 @font-face {
     font-family: 'TWKEverett';
     src: url('fonts/TWKEverett-Medium.woff') format('woff'),
-         url('fonts/TWKEverett-Medium.ttf') format('truetype');
+         url('fonts/TWKEverett-Medium.ttf') format('ttf');
     font-weight: 500;
     /* Font TWKEverett Medium incluso nei formati woff e ttf */
 }
 
 @font-face {
-    font-family: 'TWKEverettRegular';
+    font-family: 'TWKEverett-Regular';
     src: url('fonts/TWKEverett-Regular.woff') format('woff'),
-         url('fonts/TWKEverett-Regular.ttf') format('truetype');
+         url('fonts/TWKEverett-Regular.ttf') format('ttf');
     font-weight: 400;
     /* Font TWKEverett Regular incluso nei formati woff e ttf */
 }
@@ -133,7 +133,7 @@ body, html {
 }
 
 .footer-text {
-    font-family: 'TWKEverettRegular', sans-serif;
+    font-family: 'TWKEverett-Regular', sans-serif;
     font-size: 13pt;
     line-height: 1.2; /* Imposta l'altezza della linea per ridurre lo spazio tra le righe */
     color: #ffffff;
