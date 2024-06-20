@@ -90,7 +90,7 @@ body, html {
     height: 100%;
     object-fit: cover;
     border-radius: 0.6rem;
-    margin-top: 107px;
+    margin-top: 110px;
 }
 
 #flip-toggle1:checked ~ .flip-card-inner {
