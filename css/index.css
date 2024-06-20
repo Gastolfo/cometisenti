@@ -1,9 +1,17 @@
 @font-face {
-    font-family: 'TWK Everest';
-    src: url('path/to/TWKEverest-Medium.woff2') format('woff2'),
-         url('path/to/TWKEverest-Medium.woff') format('woff');
+    font-family: 'TWKEverett';
+    src: url('fonts/TWKEverett-Medium.woff') format('woff'),
+         url('fonts/TWKEverett-Medium.ttf') format('truetype');
     font-weight: 500;
-    font-style: normal;
+    /* Font TWKEverett Medium incluso nei formati woff e ttf */
+}
+
+@font-face {
+    font-family: 'TWKEverettRegular';
+    src: url('fonts/TWKEverett-Regular.woff') format('woff'),
+         url('fonts/TWKEverett-Regular.ttf') format('truetype');
+    font-weight: 400;
+    /* Font TWKEverett Regular incluso nei formati woff e ttf */
 }
 
 body, html {
@@ -12,8 +20,9 @@ body, html {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
-    background-color: #1a1a1a; /* Nero meno intenso */
+    background-color: #1a1a1a;
     scroll-snap-type: y mandatory;
+    /* Impostazioni di base per il corpo e l'html, inclusa la sincronizzazione dello scroll */
 }
 
 .screen {
@@ -23,39 +32,43 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: sans-serif;
+    font-family: 'TWKEverett', sans-serif;
     flex-direction: column;
     position: relative;
+    /* Stile della schermata principale con font TWKEverett */
 }
 
 .horizontal-scroll {
     display: flex;
-    overflow-x: auto; /* Mantiene lo scorrimento orizzontale */
+    overflow-x: auto;
     scroll-snap-type: x mandatory;
-    width: 100%; /* Aumenta la larghezza al 100% */
+    width: 100%;
     padding: 0 15px;
     scroll-padding: 0 15px;
-    -ms-overflow-style: none;  /* Nasconde la barra di scorrimento in Internet Explorer e Edge */
-    scrollbar-width: none;  /* Nasconde la barra di scorrimento in Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    /* Stile per la barra di scorrimento orizzontale */
 }
 
 .horizontal-scroll::-webkit-scrollbar {
-    display: none; /* Nasconde la barra di scorrimento in Chrome, Safari e Opera */
+    display: none;
+    /* Nasconde la barra di scorrimento in Chrome, Safari e Opera */
 }
 
 .card {
-    background: #00000000; /* Colore bianco */
-    border-radius: 0.6rem; /* Stesso border-radius */
+    background: #00000000;
+    border-radius: 0.6rem;
     margin: 2.25rem;
-    width: 275px; /* Larghezza fissa in pixel */
-    height: 389px; /* Altezza fissa in pixel */
+    width: 275px;
+    height: 389px;
     cursor: pointer;
     flex: 0 0 auto;
     scroll-snap-align: center;
     text-align: center;
     text-decoration: none;
     color: inherit;
-    position: relative; /* Necessario per posizionare il testo assolutamente */
+    position: relative;
+    /* Stile delle card */
 }
 
 .card img {
@@ -63,6 +76,7 @@ body, html {
     height: auto;
     border-top-left-radius: 0.6rem;
     border-top-right-radius: 0.6rem;
+    /* Stile delle immagini nelle card */
 }
 
 .title {
@@ -76,27 +90,30 @@ body, html {
     margin: 1rem auto;
     color: #333;
     text-transform: uppercase;
+    /* Stile del titolo delle card */
 }
 
 .header-text {
     position: absolute;
     top: 10px;
-    left: 34px;
-    font-family: 'TWK Everest', sans-serif;
+    left: 22px;
+    font-family: 'TWKEverett', sans-serif;
     font-size: 28pt;
     color: #ffffff;
-    line-height: 0.2;
-    text-align: left;
+    line-height: 0.4; /* Imposta l'altezza della linea per ridurre lo spazio tra le righe */
+    text-align: left; /* Allinea il testo a sinistra */
     text-transform: uppercase;
+    /* Stile del testo dell'intestazione */
 }
 
 .scroll-indicator {
     position: absolute;
-    bottom: 120px; /* Distanza dal fondo della pagina */
+    bottom: 120px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 10px;
+    /* Stile per l'indicatore di scorrimento */
 }
 
 .scroll-indicator .dot {
@@ -105,21 +122,26 @@ body, html {
     background-color: #fff;
     border-radius: 0.6rem;
     transition: width 0.3s, height 0.3s;
+    /* Stile dei puntini dell'indicatore di scorrimento */
 }
 
 .scroll-indicator .dot.active {
     width: 60px;
     height: 4px;
     border-radius: 0.6rem;
+    /* Stile dei puntini attivi dell'indicatore di scorrimento */
 }
 
 .footer-text {
-    font-family: 'TWK Everest', sans-serif;
-    font-size: 14pt;
+    font-family: 'TWKEverettRegular', sans-serif;
+    font-size: 13pt;
+    line-height: 1.2; /* Imposta l'altezza della linea per ridurre lo spazio tra le righe */
     color: #ffffff;
     position: absolute;
-    bottom: 15px; /* Distanza dal fondo della pagina */
-    left: 33.5px; /* Distanza dal lato sinistro della pagina */
-    right: 34px; /* Distanza dal lato destro della pagina */
+    bottom: 15px;
+    left: 22.5px;
+    right: 34px;
     text-transform: uppercase;
+    text-align: left; /* Allinea il testo a sinistra */
+    /* Stile del testo del footer */
 }

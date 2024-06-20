@@ -1,9 +1,10 @@
 @font-face {
-    font-family: 'TWK Everest';
-    src: url('path/to/TWKEverest-Medium.woff2') format('woff2'),
-         url('path/to/TWKEverest-Medium.woff') format('woff');
+    font-family: 'TWKEverett';
+    src: url('fonts/TWKEverett-Medium.woff2') format('woff2'),
+         url('fonts/TWKEverett-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
+    /* Font TWKEverett Medium incluso nei formati woff2 e truetype */
 }
 
 body, html {
@@ -17,7 +18,7 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: Arial, sans-serif; /* Cambia questo valore per cambiare il font */
+    font-family: 'TWKEverett'; /* Font di base per il corpo del documento */
     position: relative; /* Necessario per posizionare il pulsante assolutamente rispetto al body */
 }
 
@@ -40,7 +41,7 @@ body, html {
     background-color: transparent;
     width: 275px; /* Larghezza */
     height: 389px; /* Altezza */
-    font-family: inherit;
+    font-family: 'TWKEverett';
     position: relative;
     margin: 2.2rem; /* Margine */
     flex: 0 0 auto;
@@ -89,7 +90,7 @@ body, html {
     height: 100%;
     object-fit: cover;
     border-radius: 0.6rem;
-    margin-top: 101px;
+    margin-top: 105px;
 }
 
 #flip-toggle1:checked ~ .flip-card-inner {
@@ -123,7 +124,7 @@ body, html {
     padding: 10px 10px;
     border-radius: 0.6rem; /* Border radius */
     cursor: pointer;
-    font-family: inherit; /* Inherit font from parent */
+    font-family: 'TWKEverett'; /* Inherit font from parent */
     font-size: 14.26pt;
     text-decoration: none; /* Remove underline */
 }
@@ -135,7 +136,7 @@ body, html {
     background: transparent;
     border: none;
     cursor: pointer;
-    font-family: 'TWK Everest', sans-serif;
+    font-family: 'TWKEverett'; /* Imposta il font del pulsante */
 }
 
 .back-button svg {
@@ -147,8 +148,8 @@ body, html {
 .header-text {
     position: absolute;
     top: 10px;
-    left: 33.5px;
-    font-family: 'TWK Everest', sans-serif;
+    left: 19.5px;
+    font-family: 'TWKEverett';
     font-size: 28pt;
     color: #ffffff;
     line-height: 0.2;

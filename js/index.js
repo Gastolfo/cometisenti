@@ -16,16 +16,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const updateScrollIndicator = () => {
         const totalCards = document.querySelectorAll('.card').length;
-        const cardWidth = document.querySelector('.card').clientWidth + 32; // Include il margine
+        const cardWidth = document.querySelector('.card').offsetWidth + 30; // Adjust for margin
         const scrollLeft = scrollContainer.scrollLeft;
         const currentIndex = Math.round(scrollLeft / cardWidth);
 
-        // Rimuove i puntini esistenti
+        // Clear existing dots
         while (scrollIndicator.firstChild) {
             scrollIndicator.removeChild(scrollIndicator.firstChild);
         }
 
-        // Aggiunge i nuovi puntini
+        // Add new dots
         for (let i = 0; i < totalCards; i++) {
             const dot = document.createElement('div');
             dot.className = 'dot';
@@ -35,15 +35,12 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollIndicator.appendChild(dot);
         }
 
-        // Aggiorna il testo del footer
+        // Update footer text
         footerText.textContent = phrases[currentIndex];
     };
 
-    // Aggiorna i puntini inizialmente
-    updateScrollIndicator();
+    scrollContainer.addEventListener('scroll', updateScrollIndicator);
 
-    // Aggiorna i puntini al scroll
-    scrollContainer.addEventListener('scroll', () => {
-        updateScrollIndicator();
-    });
+    // Initial update
+    updateScrollIndicator();
 });
